@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">weatherapp</string>
+    <string name="today_weather">Today Weather</string>
+    <string name="click">Click here for Detail Info</string>
+    <string name="wind">Wind is :</string>
+    <string name="pressure">Pressure is :</string>
+    <string name="humidity">Humidity is :</string>
+</resources>
