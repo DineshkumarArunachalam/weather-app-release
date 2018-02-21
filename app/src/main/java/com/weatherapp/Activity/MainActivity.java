@@ -66,9 +66,11 @@ public class MainActivity extends AppCompatActivity implements WeatherView {
     public void navigateToDetail() {
 
         Intent detailIntent = new Intent(this, WeatherDetailPage.class);
-        detailIntent.putExtra(DataConstants.HUMIDITY,weatherData.getMain().getHumidity());
-        detailIntent.putExtra(DataConstants.WIND,weatherData.getWind().getSpeed());
-        detailIntent.putExtra(DataConstants.PRESSURE,weatherData.getMain().getPressure());
+        Bundle b = new Bundle();
+        b.putInt(DataConstants.HUMIDITY,weatherData.getMain().getHumidity());
+        b.putDouble(DataConstants.WIND,weatherData.getWind().getSpeed());
+        b.putInt(DataConstants.PRESSURE,weatherData.getMain().getPressure());
+        detailIntent.putExtras(b);
         startActivity(detailIntent);
     }
 

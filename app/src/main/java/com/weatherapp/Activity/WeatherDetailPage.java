@@ -30,8 +30,8 @@ public class WeatherDetailPage extends AppCompatActivity {
         Bundle bundle =getIntent().getExtras();
         if(bundle!=null ) {
             String humid=getString(R.string.humidity) + bundle.getInt(DataConstants.HUMIDITY);
-            String pressureString=getString(R.string.pressure) + bundle.getDouble(DataConstants.PRESSURE);
-            String windString=getString(R.string.wind) + bundle.getInt(DataConstants.WIND);
+            String pressureString=getString(R.string.pressure) + bundle.getInt(DataConstants.PRESSURE);
+            String windString=getString(R.string.wind) + bundle.getDouble(DataConstants.WIND);
             humidity.setText(humid);
             pressure.setText(pressureString);
             wind.setText(windString);
