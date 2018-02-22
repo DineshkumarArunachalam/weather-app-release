@@ -27,7 +27,7 @@ public class WeatherPresenterImpl implements WeatherPresenter {
         view.showProgress();
         ApiInterface apiService =
                 ApiClient.getClient().create(ApiInterface.class);
-        Call<WeatherData> call = apiService.getWeatherInformation("Canberra", "metric", DataConstants.APP_ID);
+        Call<WeatherData> call = apiService.getWeatherInformation(DataConstants.CITY_NAME, "metric", DataConstants.APP_ID);
         call.enqueue(new Callback<WeatherData>() {
             @Override
             public void onResponse( Call<WeatherData> call, Response<WeatherData> response) {

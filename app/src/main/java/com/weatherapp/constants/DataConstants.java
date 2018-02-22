@@ -10,4 +10,5 @@ public class DataConstants {
     public static String WIND ="Wind";
     public static String PRESSURE ="Pressure";
     public static String HUMIDITY ="Humidity";
+    public static String CITY_NAME="";
 }
