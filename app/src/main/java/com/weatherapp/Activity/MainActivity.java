@@ -9,7 +9,6 @@ import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
@@ -111,7 +110,8 @@ public class MainActivity extends AppCompatActivity implements WeatherView {
     public void updateTodayWeather(WeatherData info) {
         weatherData = info;
         todayWeather.setVisibility(View.VISIBLE);
-        todayWeather.setText(info.getWeather().get(0).getMain());
+        String weather=DataConstants.CITY_NAME +":"+info.getWeather().get(0).getMain();
+        todayWeather.setText(weather);
         detailClick.setVisibility(View.VISIBLE);
     }
 
